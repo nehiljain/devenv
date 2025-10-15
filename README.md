@@ -122,7 +122,7 @@ Edit rules in the devenv repository:
 
 ```bash
 cd ~/devenv  # or wherever you cloned it
-# Edit cursor-rules/commands/*.md or cursor-rules/rules/**/*.mdc
+# Edit devenv/cursor-rules/commands/*.md or devenv/cursor-rules/rules/**/*.mdc
 git add .
 git commit -m "Update rules"
 git push
@@ -141,11 +141,11 @@ All symlinked projects immediately see the updates.
 
 ```
 devenv/
-├── cursor-rules/           # Central Cursor configuration
-│   ├── commands/          # Custom Cursor commands (*.md)
-│   └── rules/             # Cursor rules (*.mdc)
-│       └── writing/       # Writing-specific rules
 ├── devenv/                # Python package
+│   ├── cursor-rules/      # Central Cursor configuration
+│   │   ├── commands/      # Custom Cursor commands (*.md)
+│   │   └── rules/         # Cursor rules (*.mdc)
+│   │       └── writing/   # Writing-specific rules
 │   ├── __init__.py
 │   ├── cli.py            # CLI commands
 │   └── setup.py          # Core symlink logic
@@ -168,19 +168,19 @@ When Cursor reads configuration from `.cursor`, it follows the symlink to the ce
 
 ### Adding Commands
 
-Create a new `.md` file in `cursor-rules/commands/`:
+Create a new `.md` file in `devenv/cursor-rules/commands/`:
 
 ```bash
-cd ~/devenv/cursor-rules/commands
+cd ~/devenv/devenv/cursor-rules/commands
 vim my-new-command.md
 ```
 
 ### Adding Rules
 
-Create a new `.mdc` file in `cursor-rules/rules/`:
+Create a new `.mdc` file in `devenv/cursor-rules/rules/`:
 
 ```bash
-cd ~/devenv/cursor-rules/rules
+cd ~/devenv/devenv/cursor-rules/rules
 mkdir -p my-category
 vim my-category/my-rule.mdc
 ```

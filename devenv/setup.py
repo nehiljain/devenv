@@ -10,7 +10,7 @@ from typing import Tuple
 def get_devenv_root() -> Path:
     """Find devenv installation directory containing cursor-rules."""
     # Get the package installation directory
-    package_dir = Path(__file__).parent.parent
+    package_dir = Path(__file__).parent
     cursor_rules_dir = package_dir / "cursor-rules"
     
     if not cursor_rules_dir.exists():

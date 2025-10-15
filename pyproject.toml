@@ -17,3 +17,13 @@ dependencies = [
 [project.scripts]
 devenv = "devenv.cli:main"
 
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["devenv*"]
+
+[tool.setuptools.package-data]
+devenv = ["cursor-rules/**/*"]
+

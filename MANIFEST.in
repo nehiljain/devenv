@@ -1,0 +1,5 @@
+recursive-include devenv/cursor-rules *
+include README.md
+include QUICK_START.md
+include SETUP_SUMMARY.md
+
