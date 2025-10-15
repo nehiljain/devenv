@@ -26,6 +26,18 @@ devenv doctor
 
 # Remove symlink
 devenv unlink
+
+# List available global tools
+devenv tools list
+
+# Install all global tools
+devenv tools install
+
+# Install specific tool
+devenv tools install --tool asck
+
+# Check which tools are installed
+devenv tools check
 ```
 
 ## Typical Workflow
@@ -64,6 +76,19 @@ ssh remote-host
 uv pip install git+https://github.com/nehiljain/devenv.git
 cd /workspace
 devenv setup
+devenv tools install  # Install global tools like asck
+```
+
+### Install Global Tools
+```bash
+# List available tools
+devenv tools list
+
+# Install all configured tools (asck, etc.)
+devenv tools install
+
+# Check what's installed
+devenv tools check
 ```
 
 ## What It Does
