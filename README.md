@@ -11,7 +11,7 @@ DevEnv centralizes your Cursor rules and commands in one place, then symlinks th
 Install directly from GitHub:
 
 ```bash
-pip install git+https://github.com/nehiljain/devenv.git
+uv pip install git+https://github.com/nehiljain/devenv.git
 ```
 
 Or clone and install locally:
@@ -19,7 +19,7 @@ Or clone and install locally:
 ```bash
 git clone https://github.com/nehiljain/devenv.git
 cd devenv
-pip install -e .
+uv pip install -e .
 ```
 
 ## Quick Start
@@ -109,7 +109,7 @@ The `.cursor` directory is now symlinked to your central rules.
 ssh user@remote-host
 
 # Install devenv
-pip install git+https://github.com/nehiljain/devenv.git
+uv pip install git+https://github.com/nehiljain/devenv.git
 
 # Setup in workspace
 cd /path/to/workspace
@@ -192,8 +192,8 @@ vim my-category/my-rule.mdc
 The package may not be installed correctly. Try reinstalling:
 
 ```bash
-pip uninstall devenv
-pip install git+https://github.com/nehiljain/devenv.git
+uv pip uninstall devenv
+uv pip install git+https://github.com/nehiljain/devenv.git
 ```
 
 ### ".cursor directory already exists"
@@ -230,12 +230,12 @@ Install devenv on each machine, then setup projects individually:
 
 ```bash
 # On machine 1
-pip install git+https://github.com/nehiljain/devenv.git
+uv pip install git+https://github.com/nehiljain/devenv.git
 cd ~/projects/project-a
 devenv setup
 
 # On machine 2
-pip install git+https://github.com/nehiljain/devenv.git
+uv pip install git+https://github.com/nehiljain/devenv.git
 cd ~/workspace/project-b
 devenv setup
 ```
