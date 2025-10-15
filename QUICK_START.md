@@ -44,10 +44,11 @@ devenv setup
 ### Update Rules
 ```bash
 # Edit rules
-cd ~/devenv/cursor-rules
+cd ~/devenv/devenv/cursor-rules
 vim rules/writing/my-rule.mdc
 
 # Push changes
+cd ~/devenv
 git add .
 git commit -m "Update rules"
 git push
