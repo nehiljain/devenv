@@ -1,0 +1,312 @@
+---
+alwaysApply: true
+---
+# Voice & Stance
+
+## Builder voice
+- Write in **first person** ("I," "we") with **specific constraints and context**
+- Show your stack, team size, timeframe, budget, scale
+- Be direct and confident; avoid hedging ("I think," "maybe," "could")
+- Write like you're explaining to a colleague over coffee, not a press release
+
+## Specificity over hype
+- **Concrete nouns and verbs** over abstract language
+- Numbers, metrics, tools, timeframes in every post
+- **Ban hype words entirely:** "revolutionize," "game-changer," "unlock," "cutting-edge," "innovative," "disruptive"
+- If you say something is better, show HOW and by HOW MUCH
+
+## Examples
+❌ **Vague:** "We recently optimized our infrastructure and saw great improvements."
+✅ **Specific:** "Moved API calls to edge. Latency: 850ms → 320ms (p95). 3 engineers, 2 weeks."
+
+❌ **Hype:** "Our revolutionary platform unlocks unprecedented productivity for modern teams."
+✅ **Proof:** "Same 5-person team. Deploys went from 8/week to 40/week. Here's how:"
+
+# Hook-First Structure
+
+## Requirements
+- **First 1-2 lines** must create tension, curiosity, or state a contrarian claim
+- Must be specific enough to be interesting but incomplete enough to create a gap
+- Generate **5 hook variations** before drafting body; pick the strongest
+- See `hook-guard.mdc` for detailed hook categories and formulas
+
+## Hook formula quick reference
+1. **Paradox:** "Quit 9-5 for freedom. Built a 24/7 prison instead."
+2. **Contrarian:** "Why I stopped doing daily standups (velocity ↑28%)"
+3. **Numbered:** "7 Redis patterns that handle 50M requests/day"
+4. **Metric-first:** "p95 latency: 1.2s → 340ms in 12 days. How:"
+5. **Mistakes:** "We shipped auth in 2 weeks. Broke in 2 hours. Lessons:"
+
+## Testing your hook
+Ask: **"Would I stop scrolling for this?"**
+- Does it create curiosity or tension?
+- Is it specific (includes tools, numbers, or concrete details)?
+- Could ONLY you write this?
+- Fits in 2 lines on mobile?
+
+# LinkedIn Formatting
+
+## Paragraph structure
+- **1-2 sentences per paragraph** maximum
+- Use **hard line breaks** (blank lines) between paragraphs for scannability
+- First 3 lines appear "above the fold" before "...see more"—make them count
+- Lead with main point; add context and qualifiers after
+
+## Post length
+- **Optimal:** 8-12 lines visible before "see more" (roughly 150-200 words)
+- **Maximum useful:** ~1,300 characters (LinkedIn's algorithm sweet spot)
+- Longer is fine if each line delivers value, but test both
+
+## Content structure
+Use one of these proven structures:
+
+### 1. Problem → Why → Steps → Proof → CTA
+```
+[Hook: problem statement with tension]
+
+Why this happens: [1-2 sentences explaining root cause]
+
+What we did:
+• Step 1 [specific action + tool/context]
+• Step 2 [specific action + result]
+• Step 3 [specific action + constraint]
+
+Result: [concrete metric: before → after]
+
+[ONE CTA: specific question tied to your content]
+
+#HashTag #HashTag
+```
+
+### 2. Case Study (metric-first)
+```
+[Hook: Result in numbers]
+
+Context: [team size, timeframe, constraints]
+
+What we changed:
+1. [Specific change #1 + why]
+2. [Specific change #2 + tool]
+3. [Specific change #3 + tradeoff]
+
+Lesson: [What surprised you or what you'd do differently]
+
+[ONE CTA: specific to your case study]
+
+#HashTag #HashTag
+```
+
+### 3. Mistakes/Lessons
+```
+[Hook: We shipped X. Y mistakes we made.]
+
+Mistake #1: [What you did wrong]
+→ [Why it was wrong + impact]
+→ [What to do instead]
+
+Mistake #2: [What you did wrong]
+→ [Why it was wrong + impact]
+→ [What to do instead]
+
+[Repeat 3-5 times]
+
+Takeaway: [One-line lesson]
+
+[ONE CTA: invite similar mistake stories]
+
+#HashTag #HashTag
+```
+
+## Links
+- **Test both approaches:**
+  - Option A: Keep post native, put link in first comment (traditional advice)
+  - Option B: Include link naturally in post (recent data shows this can work)
+- **Never use shortened URLs** (bit.ly, etc.)—use clean, full URLs
+- If including link, add context: "Full breakdown: [url]" or "Code: [url]"
+
+## CTAs (Call to Action)
+**The Golden Rule: Ask for ONE action only.**
+
+End every post with a single, clear CTA tied to your promise:
+
+**Types (pick ONE):**
+1. **Comment CTA** (best for engagement): "What's your biggest [specific problem]?"
+2. **Save/Bookmark**: "Bookmark this for your next [specific task]."
+3. **DM/Message**: "DM me 'CHECKLIST' for the PDF."
+4. **Click/Link** (lowest engagement): "Full breakdown: [link]"
+5. **Share/Tag**: "Tag someone drowning in [specific problem]."
+6. **Experience**: "What's been your experience with [specific tool]?"
+
+**CTA must:**
+- Be **tied to your hook/promise** (if you promised cost savings, ask about costs)
+- Be **specific** (not "Thoughts?" but "What's your deploy frequency?")
+- Be **short** (1-2 sentences max)
+- Ask for **ONE action** (not comment + share + follow)
+
+❌ **Bad:** "What do you think? Also share and follow me!"
+✅ **Good:** "What's your current p95 latency?"
+
+See `cta-guide.mdc` for complete examples and testing framework.
+
+## Hashtags
+- **LinkedIn: 1-3 hashtags maximum** (quality over quantity)
+- **X/Twitter: 0-2 hashtags** (often better with 0)
+- Place at **very end** (after CTA)
+- Use **sparingly and only when relevant**
+- Mix: 1 broad OR 1-2 niche tags
+- Test: Often 1-2 hashtags outperform 3+
+
+See `linkedin-hashtags-links.mdc` for complete guidance.
+
+# X (Twitter) Formatting
+
+## Thread structure
+- **8-12 tweets total** for a thread (sweet spot)
+- **First tweet** must hook with promise or curiosity gap
+- **Last tweet** recaps + CTA
+- Keep each tweet **1-2 short sentences** maximum
+
+## Tweet-by-tweet template
+
+**Tweet 1 (Hook):**
+```
+[Tension/curiosity/contrarian claim]
+
+[Optional: Sub-hook or amplifier]
+
+[Thread notation: 🧵 or ↓]
+```
+
+**Tweets 2-10 (Body):**
+```
+Each tweet = 1 idea or 1 step
+
+Use bullets when listing:
+• Point 1
+• Point 2  
+• Point 3
+
+Or numbered:
+1. Step one [context]
+2. Step two [tool/metric]
+3. Step three [result]
+```
+
+**Tweet 11-12 (Close):**
+```
+Recap: [One line summary of key insight]
+
+[CTA: question, link, or follow request]
+```
+
+## Thread pacing
+- **Vary sentence length**: mix 5-word punches with longer explanations
+- **One idea per tweet**; if it feels cramped, split into two tweets
+- **Use line breaks** within tweets for scannability
+- **Show, don't tell**: tiny code snippets or config examples earn trust
+
+## X-specific tips
+- Threads get more reach than long single tweets
+- First tweet MUST stand alone (many won't click through)
+- Visual elements (code blocks, arrows, emojis for bullets) increase engagement
+- End with "Follow me @handle for more on [topic]" if growing audience
+
+# Proof Beats Opinion
+
+## Always include at least ONE of these:
+1. **Metric/number**: "p95 latency ↓180ms" or "60% of teams"
+2. **Timeline**: "6 weeks," "2 engineers," "18 months"
+3. **Tool/stack**: "PostgreSQL," "Redis," "React," "Terraform"
+4. **Code/config snippet**: 3-10 lines showing the actual change
+5. **Screenshot**: metrics dashboard, error log, architecture diagram
+
+## Add context to advice
+When sharing recommendations, include:
+- **Team size**: "3 engineers" or "15-person team"
+- **Stage**: "pre-seed startup" or "Series B scaling"
+- **Scale**: "50K requests/day" or "2M users"
+- **Constraints**: "No budget for X" or "3-day deadline"
+
+## Examples
+
+❌ **Opinion without proof:**
+```
+Caching is really important for performance.
+You should always implement it early.
+```
+
+✅ **Opinion with proof:**
+```
+Added Redis caching to our product API.
+
+Result: p95 latency went from 850ms to 120ms.
+
+Setup took 3 hours. Handles 15M req/day with a $40/mo instance.
+
+Here's the pattern we use: [tiny code snippet]
+```
+
+# Structures to Prefer
+
+## 1. Problem → Why → Steps → Example → Result → CTA
+Best for educational/how-to content.
+- State problem with specifics
+- Explain root cause (1-2 sentences)
+- List 3-7 steps with tools/commands
+- Show tiny example (code, config, screenshot)
+- Give concrete result (metric)
+- Ask a question to drive comments
+
+## 2. PAS (Problem-Agitate-Solution)
+Best for persuasive posts about pain points.
+- **Problem**: State the pain (specific, relatable)
+- **Agitate**: Amplify why it hurts (cost, time, frustration)
+- **Solution**: Show your fix (concrete steps + result)
+
+## 3. BAB (Before-After-Bridge)
+Best for transformation stories.
+- **Before**: "We had X problem [specific context]"
+- **After**: "Now we have Y result [metric]"
+- **Bridge**: "Here's what we changed: [3-5 steps]"
+
+## 4. Mistakes → Fix → Result
+Best for lessons learned / vulnerability posts.
+- List 3-5 specific mistakes
+- For each: what you did wrong, why it failed, what to do instead
+- Show impact (time lost, cost, downtime)
+- End with key lesson
+
+## 5. Teardown
+Best for analyzing systems, products, architectures.
+- Choose specific system/tool/approach
+- Break down how it works (3-7 components)
+- For each: what it does, why it's designed that way, tradeoffs
+- Give verdict: when to use, when to avoid
+
+# Build-in-Public Guard
+
+For progress/milestone posts, **always include all 6:**
+1. **Date/Timeline**: "Week 4" or "Month 2" or specific date
+2. **Metric**: Specific number with trend (↑15% vs last week)
+3. **Milestone**: What you shipped or achieved
+4. **Lesson**: What surprised you or what you learned
+5. **Next Step**: What you're tackling next (specific)
+6. **Ask**: How community can help or feedback you need
+
+See `build-in-public.mdc` for detailed template.
+
+# Final Checklist
+
+Before hitting publish, verify:
+- [ ] **Hook** creates tension/curiosity and fits in 2 lines on mobile
+- [ ] **Specificity**: at least 2-3 numbers, tools, or concrete details
+- [ ] **No banned words**: no "leverage," "game-changing," "revolutionize," etc.
+- [ ] **No LLM patterns**: no "Let's dive in," "In conclusion," etc.
+- [ ] **Proof included**: metric, timeline, tool, code snippet, or screenshot
+- [ ] **Context given**: team size, constraints, scale (if sharing advice)
+- [ ] **Scannability**: short paragraphs with line breaks (LinkedIn) or 1-2 sentences per tweet (X)
+- [ ] **CTA present**: ONE action only, tied to your promise
+- [ ] **CTA specific**: not "Thoughts?" but "What's your [specific thing]?"
+- [ ] **Platform format**: correct structure for LinkedIn vs X
+- [ ] **Hashtags**: 1-3 for LinkedIn, 0-2 for X
+- [ ] **Could only YOU write this?** (includes your unique context/constraints)

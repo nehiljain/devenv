@@ -1,0 +1,157 @@
+---
+description: Keep writing human, not AI-ish. Cut fluff, enforce specificity. Social media focus.
+alwaysApply: true
+globs: ["**/*.md", "**/*.txt"]
+---
+
+# Banned Words for Social Content
+Delete or replace immediately:
+- `actually/actual` → remove
+- `agile` → remove
+- `arguably` → remove
+- `a bit/a little` → remove
+- `battle tested` → remove
+- `blazing fast/lightning fast` → "XX% faster" or specific metric
+- `cognitive load` → "mental overhead" or be specific
+- `cutting-edge` → remove or show why it's new
+- `delve` → "explore" or "go into"
+- `disrupt/disruptive` → remove
+- `game-changing/game-changer` → show specific benefit
+- `great/amazing/awesome` → be specific what makes it good
+- `innovative` → remove or show the innovation
+- `just` → remove (99% of the time)
+- `leverage` → "use"
+- `low-hanging fruit` → "quick wins" or specific opportunities
+- `modern/modernized` → remove or show what's different
+- `next-level` → remove
+- `out of the box` → remove
+- `performant` → "fast" or "sub-200ms p95" or specific metric
+- `pretty/quite/rather/really/very` → remove or be specific
+- `revolutionize/revolutionary` → remove
+- `robust` → "strong" or "handles X edge cases"
+- `seamless/seamlessly` → "automatic" or "zero-config"
+- `unlock` → remove
+- `utilize` → "use"
+
+# Banned Phrases (delete on sight)
+- "At the end of the day" → remove
+- "Circle back" → "follow up" or "return to"
+- "Deep dive into" → "explore" or just remove
+- "I think/I believe/we believe" → state directly
+- "In today's world" → remove
+- "Leverage synergies" → remove entirely
+- "Low-hanging fruit" → "quick wins" or be specific
+- "sort of/kind of" → remove
+- "Touch base" → "discuss" or "talk"
+- "We can't wait to see what you'll build" → remove
+- "We obsess over __" → remove
+- "We're excited to announce" → state the news directly
+- "The future of __" → remove
+
+# AI-Sounding Patterns to Avoid
+- Starting with "Great question!", "Let me share", "Let's dive into"
+- Excessive transition words: "Furthermore," "Moreover," "Additionally," "However,"
+- Lists where every item starts with the same verb or structure
+- Overly formal transitions: "In light of this," "With that being said"
+- Corporate jargon stacks: "leverage robust synergies to facilitate seamless integration"
+- Perfectly symmetrical paragraphs or "Firstly... Secondly... Thirdly..."
+- Hedging stacks: "may potentially," "might possibly," "it's important to note that"
+- Em dashes (—) everywhere → use semicolons, commas, or break into sentences
+- High-school essay closers: "In conclusion," "Overall," "To summarize"
+- Ending with "Hope this helps!" or "Let me know if you have questions!"
+
+# Human-Sounding Rules
+## Voice
+- Use contractions freely: don't, won't, can't, I'll, you're
+- Write like you're explaining to a colleague over coffee
+- One clear idea per sentence; break complex thoughts into multiple sentences
+- Vary sentence length: mix 3-word punches with longer explanatory sentences
+- Use "I" and "we" freely—show a real person is writing
+- Be confident and direct; avoid softening with "I think," "maybe," "could"
+
+## Sentence structure
+- Put subject first, verb early; avoid nested clauses
+- Lead with the main point; add context after
+- Express one idea per sentence
+- Active voice over passive: "We shipped X" not "X was shipped"
+- Simple present tense when possible
+
+## Tone
+- Positive phrasing: say what something IS, not what it ISN'T
+- Direct statements over hedged opinions
+- Skip filler intros and outros
+- Start sentences with "But" or "And" when it flows naturally (don't overuse)
+
+# Specificity Checks
+Replace every vague phrase with concrete details:
+
+| ❌ Vague | ✅ Concrete |
+|---------|-----------|
+| "Recently" | "Last Tuesday" or "3 weeks ago" |
+| "Many users" | "347 users" or "60% of teams" |
+| "Significant improvement" | "41% faster" or "↓180ms" |
+| "Large scale" | "15M requests/day" or "2.3TB/hour" |
+| "Fast" | "sub-200ms p95" or "3x faster than X" |
+| "Our team" | "3 engineers over 2 weeks" |
+| "Better performance" | "p99 latency: 850ms → 320ms" |
+| "Lots of customers" | "180+ companies" or "12K developers" |
+| "Expensive" | "$45K/month" or "3x our budget" |
+| "Complex system" | "9 microservices, 4 databases" |
+| "Long time" | "6 months" or "18 sprints" |
+
+# Concreteness Test
+For every claim, ask: **"Can I picture this or measure it?"**
+
+❌ **Vague examples:**
+- "We optimized the system"
+- "Users loved the new feature"
+- "Performance improved significantly"
+- "The team worked hard"
+- "It's really fast now"
+
+✅ **Concrete examples:**
+- "We moved auth checks to edge → latency ↓180ms"
+- "NPS went from 42 to 67 in 8 weeks"
+- "p95 response time dropped from 1.2s to 340ms"
+- "3 engineers shipped it in 11 days"
+- "Page load: 4.8s → 1.1s (77% faster)"
+
+# Examples of Good vs. Bad
+## Bad (generic, vague, AI-ish):
+```
+In today's rapidly evolving landscape, we're excited to announce 
+that we've leveraged cutting-edge technology to revolutionize the 
+way teams collaborate. Our innovative solution seamlessly integrates 
+with your existing workflow, unlocking unprecedented productivity gains.
+
+Furthermore, our robust architecture ensures blazing-fast performance 
+at scale. We obsess over the developer experience, and we can't wait 
+to see what you'll build with this game-changing platform.
+```
+
+## Good (specific, concrete, human):
+```
+We shipped real-time collaboration.
+
+3 people can now edit the same doc simultaneously. Conflicts resolve 
+automatically—no more "v2_final_FINAL.docx" disasters.
+
+Early numbers: sync latency under 100ms (p95), works offline, handles 
+50+ concurrent editors per doc.
+
+Built it in 6 weeks with 2 engineers. Uses CRDTs + WebSocket fallback.
+
+Try it: [link]. What would you use this for?
+```
+
+# Final Pass Checklist
+Before publishing, verify:
+- [ ] No banned words or phrases present
+- [ ] At least 2-3 specific numbers, metrics, or concrete details
+- [ ] Sounds like a human wrote it (not an AI or press release)
+- [ ] Could only YOU write this? (includes your specific context/constraints)
+- [ ] Passes concreteness test: can you picture or measure each claim?
+- [ ] No em dashes (—); replaced with commas, semicolons, or new sentences
+- [ ] No LLM patterns (no "Let's dive in," "In conclusion," etc.)
+- [ ] Title makes a clear promise or states a specific fact
+- [ ] Uses contractions naturally (don't, won't, can't)

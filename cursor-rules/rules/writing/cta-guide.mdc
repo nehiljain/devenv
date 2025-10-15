@@ -1,0 +1,360 @@
+---
+description: Call-to-action rules - ask for ONE action only, tie to your promise
+alwaysApply: true
+globs: ["**/*.md", "**/*.txt"]
+---
+
+# CTA (Call-to-Action) Rules
+
+## The Golden Rule
+**Ask for ONE action only.**
+
+Don't ask readers to:
+- Comment AND share AND click
+- DM you AND reply AND follow
+
+Pick ONE action per post. Make it clear and tied to your promise.
+
+## Why One Action Only
+
+**Paradox of choice:**
+- Multiple CTAs reduce conversion on all of them
+- Readers don't know which action to take first
+- Diffused focus = no action taken
+
+**Clarity wins:**
+- One clear ask = higher response rate
+- Easier for readers to decide
+- More comments, clicks, or DMs (pick one)
+
+## Tie Your CTA to Your Promise
+
+Your hook made a promise. Your CTA should complete it.
+
+**Hook → CTA alignment:**
+
+❌ **Mismatched:**
+```
+Hook: "We cut AWS costs by 75% in 3 weeks."
+[Content about cost optimization]
+CTA: "Follow me for more content!"
+```
+
+✅ **Aligned:**
+```
+Hook: "We cut AWS costs by 75% in 3 weeks."
+[Content about cost optimization]
+CTA: "What's your biggest AWS cost driver?"
+```
+
+**The hook promised cost reduction insights. The CTA invites discussion about costs, not random follows.**
+
+## Types of CTAs (Pick ONE per post)
+
+### 1. Comment CTA (best for engagement)
+Ask a specific question tied to your content.
+
+**Good examples:**
+- "What's your biggest [specific problem]?"
+- "Have you seen this pattern work?"
+- "How would you handle [specific scenario]?"
+- "What am I missing here?"
+- "Anyone else hit this issue?"
+
+**Tie to promise:**
+- Hook: "Why I stopped doing daily standups (velocity ↑28%)"
+- CTA: "What replaced standups for your team?"
+
+❌ **Generic:** "Thoughts?"
+✅ **Specific:** "What's your standup format right now?"
+
+### 2. Save/Bookmark CTA (for tactical content)
+Ask readers to save for later reference.
+
+**Good examples:**
+- "Bookmark this for your next [specific task]."
+- "Save this thread for when you're [specific situation]."
+- "Keep this handy for [specific use case]."
+
+**Tie to promise:**
+- Hook: "7 PostgreSQL queries that cut response time 200ms"
+- CTA: "Bookmark this for your next performance optimization sprint."
+
+**When to use:**
+- How-to guides
+- Technical tutorials
+- Command/config references
+- Checklists
+
+### 3. DM/Message CTA (for lead generation)
+Ask for a private conversation.
+
+**Good examples:**
+- "DM me 'CHECKLIST' for the PDF."
+- "Message me if you're dealing with [specific problem]."
+- "DM 'DEMO' to see it in action."
+- "Reach out if you're in [specific industry] facing [specific challenge]."
+
+**Tie to promise:**
+- Hook: "We open-sourced our deployment pipeline (3 min deploys)"
+- CTA: "DM 'PIPELINE' for setup docs."
+
+**When to use:**
+- Offering a resource (PDF, template, tool access)
+- Qualifying leads
+- Starting sales conversations
+
+### 4. Click/Link CTA (lowest engagement, use sparingly)
+Ask readers to click through.
+
+**Good examples:**
+- "Full breakdown with benchmarks: [link]"
+- "Try it here: [link]"
+- "Code on GitHub: [link]"
+
+**Tie to promise:**
+- Hook: "Built a tool that automates [X] in 5 minutes"
+- CTA: "Try it: [link]"
+
+**When to use:**
+- Sharing code/tool
+- Detailed how-to requiring external content
+- Product launch
+
+**Warning:** Click CTAs often get lowest engagement. Test "link in comment" approach.
+
+### 5. Share/Tag CTA (amplification)
+Ask readers to tag someone or share.
+
+**Good examples:**
+- "Tag someone who needs to see this."
+- "Share this with your [specific role] friends."
+- "Know a [specific person type]? Send them this."
+
+**Tie to promise:**
+- Hook: "3 config changes that dropped our AWS bill from $8K to $2K"
+- CTA: "Tag someone drowning in AWS costs."
+
+**When to use:**
+- Highly tactical, specific advice
+- When you're confident content will help a defined group
+- Not asking for vanity shares
+
+### 6. Experience CTA (invite stories)
+Ask readers to share their experience.
+
+**Good examples:**
+- "What's been your experience with [specific tool]?"
+- "How did you solve [specific problem]?"
+- "What worked for your team?"
+
+**Tie to promise:**
+- Hook: "We migrated 4TB in 6 hours. 3 things went wrong."
+- CTA: "What's your worst migration story?"
+
+**When to use:**
+- After sharing a lesson/mistake
+- When you want to learn from your audience
+- Building community around shared experiences
+
+## CTA Placement
+
+Place your CTA **after your content, before hashtags**.
+
+**Structure:**
+```
+[Hook]
+
+[Body content with value]
+
+[Proof/result]
+
+[CTA: One clear action]
+
+#Hashtag #Hashtag
+```
+
+**Example:**
+```
+We cut API latency from 1.2s to 340ms in 12 days.
+
+3 changes:
+1. Moved to edge compute (CDN for API calls)
+2. Added Redis caching (TTL: 5 min)
+3. Optimized DB queries (composite indexes)
+
+Result: p95 latency ↓71%, zero infra cost increase.
+
+What's your slowest API endpoint right now?
+
+#DevOps #WebPerf
+```
+
+## CTA Length
+
+**Keep it short:**
+- LinkedIn: 1-2 sentences max
+- X/Twitter: 1 sentence (or less)
+
+**Why short wins:**
+- Easy to scan
+- Clear action
+- Less friction
+
+❌ **Too long:**
+```
+I'd love to hear your thoughts on this approach and whether you've tried something similar. Also, if you found this helpful, feel free to share it with your team or colleagues who might benefit. And if you want to see more content like this, make sure to follow me for updates. Oh, and let me know in the comments what other topics you'd like me to cover!
+```
+
+✅ **Right length:**
+```
+What's your approach to [specific problem]?
+```
+
+## Testing Different CTAs
+
+Run tests to see what works for YOUR audience:
+
+**Test 1: Comment vs Save**
+- Posts 1-5: "What's your experience with X?"
+- Posts 6-10: "Bookmark this for your next Y."
+- Compare: engagement rate, saves, comments
+
+**Test 2: Question specificity**
+- Posts 1-5: Generic "Thoughts?"
+- Posts 6-10: Specific "What's your [specific metric] right now?"
+- Compare: comment quality, reply depth
+
+**Test 3: Action vs Question**
+- Posts 1-5: "Bookmark this for later."
+- Posts 6-10: "What would you add to this list?"
+- Compare: saves vs comments
+
+**Track:**
+- Comment count and quality (are replies thoughtful?)
+- Saves/bookmarks
+- DMs received
+- Click-through (if applicable)
+- Profile visits (quality signal)
+
+## Common CTA Mistakes
+
+### ❌ Mistake 1: Multiple actions
+```
+What do you think? Drop a comment below! 
+
+Also, save this for later and share with your team!
+
+Oh, and follow me for more content like this.
+
+Link in bio for the full guide!
+```
+**Fix:** Pick ONE action. If you want comments, just ask for comments.
+
+### ❌ Mistake 2: Generic questions
+```
+Thoughts?
+What do you think?
+Agree or disagree?
+```
+**Fix:** Be specific. "What's your [specific thing]?" or "How do you handle [specific scenario]?"
+
+### ❌ Mistake 3: No CTA at all
+```
+[Great content]
+
+#Hashtags
+```
+**Fix:** Always end with ONE clear action. Don't make readers guess what to do.
+
+### ❌ Mistake 4: Mismatched CTA
+```
+Hook: "We cut latency by 70% in 2 weeks."
+[Content about performance]
+CTA: "Follow me for startup content!"
+```
+**Fix:** Match your CTA to your hook. "What's your p95 latency right now?"
+
+### ❌ Mistake 5: Asking for follows
+```
+Follow me if you want more content like this!
+```
+**Fix:** Earn follows by providing value. Don't ask for them. Focus on engagement.
+
+## Platform-Specific CTA Tips
+
+### LinkedIn
+- **Comments perform best**: Questions that invite discussion
+- **Saves are growing**: "Bookmark this" for tactical content
+- **Avoid naked links**: Put links in comments or add context
+- **Professional tone**: Keep it conversational but not overly casual
+
+### X/Twitter
+- **Keep it conversational**: Match the platform tone
+- **Thread-specific**: "If this thread helped, follow @you for more on [niche]"
+- **RT/Like less effective**: Focus on replies and genuine engagement
+- **Use line breaks**: Make CTA stand out visually
+
+## Examples: Weak → Strong CTAs
+
+### Example 1: Generic → Specific
+❌ **Weak:** "What are your thoughts on this?"
+✅ **Strong:** "What's your current deploy frequency?"
+
+### Example 2: Multiple → Single
+❌ **Weak:** "Comment below, share with your team, and follow for more!"
+✅ **Strong:** "What's your biggest deployment bottleneck?"
+
+### Example 3: Mismatched → Aligned
+❌ **Weak:**
+```
+Hook: "Built a tool that automates standup notes"
+CTA: "What do you think about remote work?"
+```
+✅ **Strong:**
+```
+Hook: "Built a tool that automates standup notes"
+CTA: "What's your standup format? Daily? Async?"
+```
+
+### Example 4: Passive → Active
+❌ **Weak:** "Feel free to share your experiences if you want."
+✅ **Strong:** "What worked for your team?"
+
+### Example 5: Self-focused → Reader-focused
+❌ **Weak:** "Follow me for more tips like this!"
+✅ **Strong:** "Bookmark this for your next performance sprint."
+
+## CTA Checklist
+
+Before publishing, verify your CTA:
+- [ ] **One action only** (not 2-3 actions)
+- [ ] **Tied to your promise** (hook → content → CTA alignment)
+- [ ] **Specific** (not "thoughts?" but "what's your X?")
+- [ ] **Short** (1-2 sentences max)
+- [ ] **Placed correctly** (after content, before hashtags)
+- [ ] **Actionable** (clear what reader should do)
+- [ ] **Platform-appropriate** (matches LinkedIn/X tone)
+- [ ] **Value-focused** (what reader gets, not what you want)
+
+## When to Skip the CTA
+
+**Rarely, but valid cases:**
+- Pure announcement with no discussion needed
+- Tribute/memorial post
+- Simple appreciation post
+
+**Default: Always include ONE CTA.** It increases engagement 30-50% on average.
+
+## Final Formula
+
+```
+Hook (promise) → Content (deliver) → CTA (tied to promise, ONE action)
+```
+
+**Example flow:**
+- Hook: "Cut AWS costs 75% without changing code"
+- Content: 6 config changes with specifics
+- CTA: "What's your biggest AWS bill line item?" (ONE action, tied to cost theme)
+
+Not: "What do you think? Also follow me and share!" (multiple actions, generic)

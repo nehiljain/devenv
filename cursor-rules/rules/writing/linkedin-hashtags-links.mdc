@@ -1,0 +1,368 @@
+---
+description: LinkedIn hashtag and link best practices with examples and testing strategy
+alwaysApply: true
+globs: ["**/*linkedin*.md", "**/*li-*.md"]
+---
+
+# Hashtag Strategy
+
+## Rules (Conservative Approach)
+- **LinkedIn: 1-3 hashtags maximum** (quality over quantity)
+- Place hashtags **at the very end** of the post (after CTA, after all content)
+- No hashtags in the middle of post content (breaks reading flow)
+- Use sparingly and only when relevant to your content
+
+## Why Less is More
+
+**LinkedIn algorithm (2024-2025):**
+- Posts with 1-3 relevant hashtags often outperform 5+
+- Too many hashtags can signal spam
+- Native content quality matters more than hashtag volume
+- Focus on writing value, not gaming reach
+
+## Choosing Effective Hashtags
+
+### Pick 1-3 that are genuinely relevant
+
+**Broad hashtags** (100K-1M+ followers):
+- Higher reach but more noise
+- Examples: #DevOps, #AI, #SoftwareEngineering
+- Use maximum 1 of these
+
+**Niche hashtags** (10K-100K followers):
+- More targeted, higher engagement
+- Examples: #PostgreSQL, #RayFramework, #DuckDB
+- Use 1-2 of these if they directly describe your content
+
+**Your rule of thumb:**
+- Can someone searching this tag find YOUR content valuable?
+- If no, don't use it
+
+### Match your audience's search behavior
+Research which tags your target audience actually follows:
+- Check profiles of people in your audience—which tags do they use?
+- Look at top posts in your niche—which 3-5 tags appear consistently?
+- Avoid dead/unused tags (if it has <1K followers, skip it)
+
+## Examples of Good Hashtag Usage (1-3 only)
+
+**For infrastructure/SRE content:**
+```
+Option 1: #Kubernetes #Observability
+Option 2: #DevOps #SRE
+Option 3: #CloudEngineering
+```
+
+**For data engineering:**
+```
+Option 1: #DataEngineering #Python
+Option 2: #ApacheSpark
+Option 3: #DataScience #Analytics
+```
+
+**For AI/ML engineering:**
+```
+Option 1: #MachineLearning #MLOps
+Option 2: #PyTorch
+Option 3: #AI #ProductionML
+```
+
+**For startup/founder content:**
+```
+Option 1: #BuildInPublic #Startups
+Option 2: #SaaS
+Option 3: #Founders
+```
+
+**For web/frontend:**
+```
+Option 1: #React #WebPerf
+Option 2: #JavaScript
+Option 3: #Frontend
+```
+
+**When to use just 1 hashtag:**
+- You have a very specific niche (e.g., #PostgreSQL for a Postgres optimization post)
+- The content is so good it will spread organically
+- You're in a highly engaged community around one tag
+
+## Hashtag Placement
+
+✅ **Correct (1-3 only):**
+```
+We moved our API to edge compute.
+
+Result: p95 latency dropped from 850ms to 320ms.
+
+3 engineers, 2 weeks. Here's how:
+[content...]
+
+What would you do differently?
+
+#CloudComputing #WebPerf
+```
+
+✅ **Also correct (minimal):**
+```
+[Same content as above]
+
+What would you do differently?
+
+#DevOps
+```
+
+❌ **Wrong (mid-post):**
+```
+We moved our API to edge compute #DevOps #CloudComputing.
+
+Result: p95 latency dropped from 850ms to 320ms #WebPerformance.
+[content...]
+```
+
+❌ **Wrong (too many):**
+```
+[Content...]
+
+#DevOps #CloudComputing #WebPerformance #SoftwareEngineering #Tech #Innovation
+```
+
+## Testing Your Hashtags
+
+Run A/B tests across 10+ similar posts:
+
+**Test 1: Volume**
+- Posts 1-5: Use 1 hashtag
+- Posts 6-10: Use 2-3 hashtags
+- Compare: engagement rate, impressions, reach
+
+**Test 2: Specificity**
+- Posts 1-5: Use 1 broad tag (#DevOps)
+- Posts 6-10: Use 1-2 niche tags (#PostgreSQL #Observability)
+- Compare: comment quality, profile visits, relevant engagement
+
+**Test 3: No hashtags**
+- Posts 1-5: Use 0 hashtags
+- Posts 6-10: Use 1-3 hashtags
+- Compare: organic reach, engagement
+
+**Track in LinkedIn analytics (7 days post-publish):**
+- Impressions by source (see "Hashtags" contribution)
+- Engagement rate (reactions + comments + shares / impressions)
+- Profile visits (quality signal)
+- Follower gain (relevance signal)
+
+**Key insight:** Often 1-2 relevant hashtags outperform 3+
+
+# Link Strategy
+
+## The algorithm debate
+LinkedIn's algorithm treatment of links is **inconsistent and changes over time**.
+
+Current best practice: **Test both approaches in your niche**
+
+### Option A: Native post, link in first comment (conservative)
+**When to use:**
+- You're optimizing for reach/engagement
+- The post has value without clicking away
+- You're unsure which approach works for your audience
+
+**How:**
+1. Write the post with zero links
+2. Publish
+3. Immediately comment with the link + context
+
+**Example:**
+```
+Post body:
+"We cut our AWS costs by 75% last quarter.
+
+Same workload. Zero downtime. 6 changes: [content...]"
+
+First comment:
+"Full breakdown with commands and config here: 
+https://example.com/aws-cost-optimization"
+```
+
+### Option B: Include link naturally in post (recent data suggests this can work)
+**When to use:**
+- Link is essential context (GitHub repo, demo, tool)
+- You're driving traffic to high-value resource
+- Recent tests in your niche show link-in-post performs well
+
+**How:**
+- Include link with clear context mid-post or at end
+- Don't make the link the main point; make the POST valuable
+- One link maximum; multiple links definitely hurt reach
+
+**Example:**
+```
+We open-sourced our deployment pipeline.
+
+Goes from PR merge → production in 3 minutes. 
+Handles rollback, health checks, gradual traffic shift.
+
+Used by 3 teams, 200+ deploys/week.
+
+Code: https://github.com/example/deployer
+
+What's your deploy time?
+```
+
+## Link formatting
+
+### Do:
+- ✅ Use **full, clean URLs**: `https://yoursite.com/specific-page`
+- ✅ Add **context before the link**: "Full guide: [url]" or "Code: [url]" or "Demo: [url]"
+- ✅ Make sure the **post has value without clicking** (summary, key points)
+
+### Don't:
+- ❌ **Shortened URLs** (bit.ly, tinyurl, etc.)—looks spammy, LinkedIn dislikes
+- ❌ **Multiple links** in one post—splits attention, hurts algorithm
+- ❌ **Link-only posts**—zero native value, algorithm buries it
+- ❌ **UTM parameters exposed**—use LinkedIn's Campaign Manager if tracking
+
+## Link placement
+
+**Option 1: After main content, before CTA**
+```
+[Hook]
+[Body content with value]
+[Proof/example]
+
+Full breakdown: https://yoursite.com/post
+
+[CTA question]
+
+#HashTags
+```
+
+**Option 2: Mid-content as natural reference**
+```
+[Hook]
+[Context]
+
+We built this tool: https://github.com/example/tool
+
+Here's how it works:
+• [Point 1]
+• [Point 2]
+
+[CTA question]
+
+#HashTags
+```
+
+**Option 3: First comment (safest for reach)**
+```
+Post: [Full valuable content, no link]
+
+Comment: "GitHub repo: https://github.com/example/tool"
+```
+
+# Native Content Bias
+
+## What LinkedIn's algorithm favors (2024-2025 behavior)
+LinkedIn explicitly prioritizes posts that:
+1. **Keep users on LinkedIn** (native text, images, documents, polls)
+2. **Come from individuals with expertise** (not company pages)
+3. **Generate meaningful discussion** (comments > reactions > shares)
+4. **Provide clear value without needing to click away**
+
+## What performs best
+
+### High engagement (prioritized):
+- Native text posts with valuable insights + personal experience
+- Posts with native images (screenshots, diagrams, photos)
+- Carousel posts (PDF documents, up to 10 slides)
+- Polls with good setup context
+- Posts that spark thoughtful comments (questions, controversial takes, lessons learned)
+
+### Lower engagement (deprioritized):
+- Posts with external links (reduces time on platform)
+- Video links to YouTube (LinkedIn wants you to upload native video)
+- Posts from company pages (unless high existing engagement)
+- Short, generic posts ("Happy Monday!")
+- Obvious self-promotion
+
+## Strategy implications
+
+### For content with a link:
+- **Make the LinkedIn post 80% of the value**
+- Link is optional "go deeper" resource
+- Summarize key takeaways IN the post
+- Include a code snippet or screenshot in the post
+
+### For promoting your own content:
+- Don't just post title + link (low reach)
+- Extract the most valuable insight and make it the POST
+- Link becomes "full details here" not "here's my post"
+
+**Example:**
+
+❌ **Low reach approach:**
+```
+I wrote about optimizing database queries for scale.
+
+Check it out: [link]
+
+#Database #Performance
+```
+
+✅ **High reach approach:**
+```
+We cut our PostgreSQL query time from 3.2s to 180ms.
+
+3 changes:
+1. Added index on user_id + created_at (composite)
+2. Moved aggregation to materialized view (refreshed hourly)
+3. Partitioned events table by month (12 partitions)
+
+Result: same data, 17x faster, no schema migration.
+
+Full SQL and benchmarks: [link]
+
+What's your slowest query?
+
+#Database #PostgreSQL #Performance
+```
+
+## Testing your approach
+
+Track these metrics in LinkedIn analytics (available 7 days after posting):
+- **Impressions**: how many people saw it
+- **Engagement rate**: (reactions + comments + shares) / impressions
+- **Click-through rate** (if you have a link)
+
+Compare:
+- Posts with link in body vs link in comment vs no link
+- Posts with 3 hashtags vs 5 hashtags
+- Different hook styles
+- Different times of day / days of week
+
+**Run at least 10 posts with each approach before deciding.**
+
+# Quick decision tree
+
+```
+Do you NEED people to click a link?
+│
+├─ No → Native post, no link at all (best reach)
+│
+└─ Yes
+   │
+   ├─ Is the link essential to understand the post?
+   │  └─ Yes → Include link naturally in post with context
+   │
+   └─ No → Make post valuable without it, link in first comment
+```
+
+# Summary Checklist
+
+Before publishing LinkedIn posts:
+- [ ] **Hashtags: 1-3 maximum**, only genuinely relevant, placed at the end
+- [ ] **X/Twitter: 0-2 hashtags**, prefer 0 for threads
+- [ ] **Links**: tested strategy (native vs first comment), full clean URLs only
+- [ ] **Value**: post is valuable without clicking away
+- [ ] **Context**: if link included, has clear context ("Code:", "Full guide:")
+- [ ] **No spam signals**: no URL shorteners, no 4+ hashtags, no mid-post tags
+- [ ] **Test regularly**: Run hashtag volume tests, track what works for YOUR audience

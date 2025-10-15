@@ -1,0 +1,209 @@
+---
+description: Auto-enforce strong first line hooks that stop the scroll
+alwaysApply: false
+---
+# Hook Categories (pick one)
+
+## 1. Paradox/Contrast
+Create tension between what people expect and reality.
+
+**Examples:**
+- "Quit my 9–5 for 'freedom.' Built a 24/7 prison instead."
+- "We hired 3 engineers to go faster. Shipped 40% slower."
+- "Spent $12K on AWS. Switched to X. Now spend $340."
+- "100% test coverage. Production still broke every week."
+
+**Formula:** [Expected outcome] + [Opposite reality]
+
+## 2. Contrarian
+Challenge conventional wisdom your audience believes.
+
+**Examples:**
+- "Why I stopped doing daily standups (team velocity ↑28%)"
+- "We removed our staging environment. Deployments got safer."
+- "Microservices made our system worse. Here's why."
+- "Stop writing tests first. Write them after. Here's when."
+
+**Formula:** "Why I stopped [popular practice]" + (optional: result)
+
+## 3. Numbered Promise
+Specific, countable benefit. Must deliver exactly what's promised.
+
+**Examples:**
+- "7 PostgreSQL queries that cut our API response time by 200ms"
+- "3 config changes that dropped our AWS bill from $8K to $2K"
+- "5 Redis patterns that handle 50M requests/day"
+- "12 lines of code that saved us 40 hours/week"
+
+**Formula:** [Number] [specific things] that [specific, measurable result]
+
+## 4. Mini-case/Metric First
+Lead with the result, then explain how.
+
+**Examples:**
+- "p95 latency: 1.2s → 340ms in 12 days. Here's how."
+- "We went from 8 hours to 12 minutes. Same accuracy."
+- "Auth service: 99.2% → 99.97% uptime. 3 changes."
+- "Cut Docker image size 85%: 2.1GB → 320MB."
+
+**Formula:** [Metric: before → after] in [timeframe]. [How/What/Why].
+
+## 5. Mistakes/Lessons
+Vulnerability + specificity = credibility with technical audiences.
+
+**Examples:**
+- "We shipped real-time collab. 5 mistakes we made."
+- "Built our own logging system. $40K mistake. Lessons:"
+- "Migrated to Kubernetes. 3 things I'd do differently."
+- "Launched in 2 weeks. Broke in 2 hours. What we learned:"
+
+**Formula:** "We [action]. [Number] mistakes/lessons."
+
+## 6. Hard Truth/Unpopular Opinion
+State something people know but don't say publicly.
+
+**Examples:**
+- "Your microservices are just distributed monoliths."
+- "Tech debt isn't the problem. Unclear ownership is."
+- "You don't need Kubernetes. You need 2 servers and boring tech."
+- "That outage wasn't bad luck. It was bad architecture."
+
+**Formula:** [Uncomfortable truth] + (optional: the real problem)
+
+# Hook Requirements
+
+## Must have:
+- **Tension, curiosity, or contrarian claim** in first 1-2 lines
+- **Specificity**: numbers, tools, timeframes, or concrete examples
+- **Clarity**: immediately understand what this is about
+- **Mobile test**: fits in 2 lines on a phone screen
+- **Scroll-stop test**: Would YOU stop scrolling for this?
+
+## Must avoid:
+- Generic openings: "In today's world," "I want to share," "Let me tell you"
+- Soft language: "I think," "maybe," "possibly," "might"
+- Obvious statements everyone agrees with
+- Hype words without proof: "game-changing," "revolutionary," "unlock"
+- Vague promises: "improve your system" (improve HOW? by HOW MUCH?)
+- LLM patterns: "Let's dive into," "Buckle up," "Here's the thing"
+
+# Hook Generation Process
+
+## Step 1: Generate 5 variations
+Create one hook in each category (or 5 in your strongest categories):
+1. Paradox/contrast version
+2. Contrarian version
+3. Numbered promise version
+4. Mini-case/metric version
+5. Mistakes/lessons version
+
+## Step 2: Apply filters
+For each hook, check:
+- [ ] Is it specific? (includes numbers, tools, or concrete details)
+- [ ] Creates tension or curiosity?
+- [ ] Could ONLY you write this? (not generic advice)
+- [ ] Passes scroll-stop test?
+- [ ] Fits in 2 lines on mobile?
+- [ ] No banned words/phrases?
+
+## Step 3: Pick the strongest
+Choose based on:
+- **Tension level**: which creates the most curiosity gap?
+- **Specificity**: which is most concrete?
+- **Audience fit**: which resonates with your target reader?
+- **Defensibility**: can you fully deliver on the promise?
+
+# Weak Hook Warning Signs
+
+❌ **Red flags that your hook is weak:**
+
+## 1. Uses filler or soft language
+- "I think we should consider..."
+- "It might be a good idea to..."
+- "Here are some thoughts on..."
+- "I wanted to share a little about..."
+
+## 2. Makes obvious statements
+- "Testing is important for code quality"
+- "Good documentation helps teams"
+- "Communication matters in remote work"
+- "Speed and reliability are key"
+
+## 3. Lacks specificity
+- "We improved our system significantly" (by HOW MUCH?)
+- "Recently shipped a big feature" (WHICH feature? WHEN?)
+- "This changed everything for us" (WHAT changed? HOW?)
+- "Made it way faster" (HOW fast? FASTER THAN WHAT?)
+
+## 4. Too long or rambling
+- More than 2 lines on mobile
+- Multiple clauses or ideas crammed together
+- Includes context that should come later
+- Buries the lead with setup
+
+## 5. Generic or templated
+- Could apply to any company/team/product
+- Reads like a press release or marketing copy
+- No unique details or constraints
+- Someone else could have written the exact same thing
+
+# Examples: Weak → Strong
+
+## Example 1: Vague → Specific
+❌ **Weak:** "We recently improved our API performance and wanted to share some insights."
+✅ **Strong:** "API response time: 1.8s → 340ms. 5 PostgreSQL changes."
+
+## Example 2: Generic → Personal
+❌ **Weak:** "Here are some best practices for building scalable systems."
+✅ **Strong:** "We hit 50M req/day with 2 engineers. No Kubernetes. Here's the stack:"
+
+## Example 3: Obvious → Contrarian
+❌ **Weak:** "Documentation is important for developer experience."
+✅ **Strong:** "We deleted 80% of our docs. Onboarding got faster."
+
+## Example 4: Filler → Direct
+❌ **Weak:** "I wanted to share some thoughts on what we learned from our recent migration..."
+✅ **Strong:** "Migrated 4TB in 6 hours. 3 things that went wrong:"
+
+## Example 5: Hype → Proof
+❌ **Weak:** "Our revolutionary new approach is game-changing for modern teams."
+✅ **Strong:** "Same hardware. 8x throughput. Changed 3 lines of config."
+
+# Hook Testing Checklist
+
+Before finalizing your hook, verify:
+- [ ] **Scroll-stop test**: Would you personally stop scrolling for this?
+- [ ] **Specificity test**: Includes at least one number, tool, or concrete detail
+- [ ] **Uniqueness test**: Could only YOU (or your team) write this?
+- [ ] **Mobile test**: Fits in 2 lines on a phone screen
+- [ ] **Clarity test**: Reader immediately knows what this is about
+- [ ] **Tension test**: Creates curiosity gap or contrarian stance
+- [ ] **Deliverability test**: You can fully back up this claim in the body
+- [ ] **No banned words**: No "leverage," "game-changing," "revolutionary," etc.
+- [ ] **No LLM patterns**: No "Let's dive in," "Buckle up," etc.
+
+# Advanced: Hook + Sub-hook Pattern
+
+For longer posts, use a two-line hook structure:
+
+**Line 1 (Hook):** Creates tension or states the result
+**Line 2 (Sub-hook):** Adds context or amplifies tension
+
+**Examples:**
+
+```
+We spent 6 months building our own auth system.
+Threw it away in week 7. Here's why:
+```
+
+```
+Cut our infrastructure costs by 75% last quarter.
+Didn't touch a single line of application code. How:
+```
+
+```
+Our deployment pipeline went from 45 minutes to 3 minutes.
+Same tests. Same coverage. 4 changes:
+```
+
+**Pattern:** [Surprising outcome] + [Amplifying detail or "how" tease]

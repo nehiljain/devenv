@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devenv"
+version = "0.1.0"
+description = "Personal development environment setup tool for Cursor rules management"
+authors = [{name = "Nehil Jain"}]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+devenv = "devenv.cli:main"
+
