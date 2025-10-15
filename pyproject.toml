@@ -12,6 +12,7 @@ requires-python = ">=3.8"
 dependencies = [
     "click>=8.0",
     "rich>=13.0",
+    "pyyaml>=6.0",
 ]
 
 [project.scripts]
@@ -25,5 +26,5 @@ where = ["."]
 include = ["devenv*"]
 
 [tool.setuptools.package-data]
-devenv = ["cursor-rules/**/*"]
+devenv = ["cursor-rules/**/*", "tools.yaml"]
 

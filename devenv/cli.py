@@ -3,6 +3,8 @@
 import click
 from pathlib import Path
 import sys
+import subprocess
+import yaml
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
@@ -280,6 +282,150 @@ def doctor(target_dir):
         console.print()
     else:
         console.print("[bold green]✓ All checks passed![/bold green]\n")
+
+
+@main.group()
+def tools():
+    """Manage global development tools."""
+    pass
+
+
+def load_tools_config() -> list:
+    """Load tools configuration from tools.yaml."""
+    try:
+        devenv_root = get_devenv_root()
+        tools_file = devenv_root / "tools.yaml"
+        
+        if not tools_file.exists():
+            console.print("[yellow]Warning: tools.yaml not found[/yellow]")
+            return []
+        
+        with open(tools_file, 'r') as f:
+            config = yaml.safe_load(f)
+            return config.get('tools', [])
+    except Exception as e:
+        console.print(f"[red]Error loading tools config: {e}[/red]")
+        return []
+
+
+@tools.command('list')
+def tools_list():
+    """List available global tools."""
+    console.print("\n[bold cyan]Available Global Tools[/bold cyan]\n")
+    
+    tools_config = load_tools_config()
+    
+    if not tools_config:
+        console.print("[yellow]No tools configured[/yellow]\n")
+        return
+    
+    table = Table(show_header=True, header_style="bold magenta")
+    table.add_column("Name", style="cyan")
+    table.add_column("Command", style="green")
+    table.add_column("Description", style="white")
+    
+    for tool in tools_config:
+        table.add_row(
+            tool.get('name', 'unknown'),
+            tool.get('command', 'unknown'),
+            tool.get('description', '')
+        )
+    
+    console.print(table)
+    console.print()
+
+
+@tools.command('install')
+@click.option(
+    '--tool',
+    help='Install specific tool by name (otherwise installs all)'
+)
+def tools_install(tool):
+    """Install global tools using uv tool install.
+    
+    Installs all configured tools from tools.yaml, or a specific tool if --tool is specified.
+    """
+    console.print("\n[bold cyan]Installing Global Tools[/bold cyan]\n")
+    
+    tools_config = load_tools_config()
+    
+    if not tools_config:
+        console.print("[yellow]No tools configured[/yellow]\n")
+        return
+    
+    # Filter to specific tool if requested
+    if tool:
+        tools_config = [t for t in tools_config if t.get('name') == tool]
+        if not tools_config:
+            console.print(f"[red]Tool '{tool}' not found in configuration[/red]\n")
+            sys.exit(1)
+    
+    # Install each tool
+    for tool_config in tools_config:
+        name = tool_config.get('name', 'unknown')
+        repo = tool_config.get('repo')
+        
+        if not repo:
+            console.print(f"[yellow]Skipping {name}: no repo configured[/yellow]")
+            continue
+        
+        console.print(f"Installing [cyan]{name}[/cyan]...")
+        
+        try:
+            result = subprocess.run(
+                ['uv', 'tool', 'install', repo],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            console.print(f"[green]✓[/green] Installed {name}")
+        except subprocess.CalledProcessError as e:
+            console.print(f"[red]✗[/red] Failed to install {name}")
+            if e.stderr:
+                console.print(f"  Error: {e.stderr.strip()}")
+        except FileNotFoundError:
+            console.print("[red]Error: uv command not found[/red]")
+            console.print("Install uv first: https://docs.astral.sh/uv/")
+            sys.exit(1)
+    
+    console.print("\n[bold green]Tool installation complete![/bold green]\n")
+
+
+@tools.command('check')
+def tools_check():
+    """Check which tools are installed."""
+    console.print("\n[bold cyan]Checking Installed Tools[/bold cyan]\n")
+    
+    tools_config = load_tools_config()
+    
+    if not tools_config:
+        console.print("[yellow]No tools configured[/yellow]\n")
+        return
+    
+    table = Table(show_header=True, header_style="bold magenta")
+    table.add_column("Tool", style="cyan")
+    table.add_column("Command", style="green")
+    table.add_column("Installed", style="white")
+    
+    for tool_config in tools_config:
+        name = tool_config.get('name', 'unknown')
+        command = tool_config.get('command', 'unknown')
+        
+        # Check if command is available
+        try:
+            result = subprocess.run(
+                ['which', command],
+                capture_output=True,
+                text=True
+            )
+            installed = "[green]✓ Yes[/green]" if result.returncode == 0 else "[red]✗ No[/red]"
+        except:
+            installed = "[red]✗ No[/red]"
+        
+        table.add_row(name, command, installed)
+    
+    console.print(table)
+    console.print()
 
 
 if __name__ == "__main__":

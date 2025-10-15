@@ -1,0 +1,15 @@
+# Global tools to install with devenv
+# These tools will be installed globally via `uv tool install`
+
+tools:
+  - name: asck
+    description: Anyscale Context Kit - Build unified documentation context for LLM development
+    repo: git+https://github.com/anyscale/anyscale-context-kit.git
+    command: asck
+  
+  # Add more tools here as needed
+  # - name: my-tool
+  #   description: Description of the tool
+  #   repo: git+https://github.com/username/repo.git
+  #   command: my-tool
+

@@ -35,6 +35,8 @@ That's it! Your project now has a `.cursor` directory symlinked to the central r
 
 ## Commands
 
+### Core Commands
+
 ### `devenv setup`
 
 Create symlinks for Cursor rules in a project directory.
@@ -89,6 +91,36 @@ devenv unlink
 
 # Unlink specific directory
 devenv unlink --target-dir ~/projects/my-project
+```
+
+### Global Tools Management
+
+### `devenv tools list`
+
+List all available global tools that can be installed.
+
+```bash
+devenv tools list
+```
+
+### `devenv tools install`
+
+Install global tools using `uv tool install`.
+
+```bash
+# Install all configured tools
+devenv tools install
+
+# Install specific tool by name
+devenv tools install --tool asck
+```
+
+### `devenv tools check`
+
+Check which tools are currently installed.
+
+```bash
+devenv tools check
 ```
 
 ## Usage Workflow
@@ -163,6 +195,43 @@ DevEnv creates symbolic links from your project's `.cursor` directory to the cen
 ```
 
 When Cursor reads configuration from `.cursor`, it follows the symlink to the central location. When you update the central rules, all projects using symlinks see the changes immediately.
+
+## Managing Global Tools
+
+DevEnv can install and manage global development tools via `uv tool install`. Configure tools in `devenv/tools.yaml`.
+
+### Current Tools
+
+- **asck** (Anyscale Context Kit): Build unified documentation context for LLM-assisted development
+
+### Adding New Tools
+
+Edit `devenv/tools.yaml` in your cloned devenv repository:
+
+```yaml
+tools:
+  - name: my-tool
+    description: Description of what the tool does
+    repo: git+https://github.com/username/my-tool.git
+    command: my-tool
+```
+
+Then commit and push:
+
+```bash
+cd ~/devenv
+git add devenv/tools.yaml
+git commit -m "Add my-tool to global tools"
+git push
+```
+
+On any machine:
+
+```bash
+cd ~/devenv && git pull
+uv pip install --upgrade git+https://github.com/nehiljain/devenv.git
+devenv tools install --tool my-tool
+```
 
 ## Adding Your Own Rules
 
